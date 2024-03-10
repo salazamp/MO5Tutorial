@@ -1,0 +1,9 @@
+#Create a new file named forms.py inside the payroll app directory (payroll/forms.py) and define a form for the payroll calculator:
+        from django import forms
+        
+from .models import Payroll
+
+class PayrollForm(forms.ModelForm):
+    class Meta:
+        model = Payroll
+        fields = ['name', 'rate_of_pay', 'hours_worked']
